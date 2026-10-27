@@ -55,4 +55,9 @@ public class RouteController {
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
+
+    @GetMapping("/unused")
+    public List<Route> getUnusedRoutes() {
+        return routeService.getUnusedRoutes();
+    }
 }

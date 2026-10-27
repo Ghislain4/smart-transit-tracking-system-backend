@@ -1,5 +1,7 @@
 package com.smarttransit.controller;
 
+import com.smarttransit.model.Driver;
+import com.smarttransit.service.DriverService;
 import com.smarttransit.model.Commuter;
 import com.smarttransit.service.CommuterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,5 +61,17 @@ public class CommuterController {
     @GetMapping("/by-last-name")
     public List<Commuter> getByLastName(@RequestParam String lastName) {
         return commuterService.getByLastName(lastName);
+    }
+
+    @Autowired
+    private DriverService driverService;
+
+    @GetMapping("/of-driver/{driverId}")
+    public ResponseEntity<?> getCommutersOfDriver(@PathVariable UUID driverId) {
+        Optional<Driver> driver = driverService.getById(driverId);
+        if (driver.isEmpty()) {
+            return new ResponseEntity<>("The driver with that id does not exist", HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(commuterService.getCommutersOfDriver(driverId), HttpStatus.OK);
     }
 }

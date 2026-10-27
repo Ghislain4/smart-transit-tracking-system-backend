@@ -55,4 +55,9 @@ public class BusController {
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
+
+    @GetMapping("/free")
+    public List<Bus> getFreeBuses() {
+        return busService.getFreeBuses();
+    }
 }

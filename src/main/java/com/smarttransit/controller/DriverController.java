@@ -55,4 +55,9 @@ public class DriverController {
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
+
+    @GetMapping("/by-route")
+    public List<Driver> getByRoute(@RequestParam String name) {
+        return driverService.getByRoute(name);
+    }
 }

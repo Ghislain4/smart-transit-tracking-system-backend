@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "routes")
+@Table(name = "route")
 public class Route {
 
     @Id
@@ -17,7 +17,7 @@ public class Route {
 
     @ManyToMany(mappedBy = "routes")
     @JsonIgnore
-    private List<Driver> Drivers;
+    private List<Driver> drivers;
 
     public Route() {
     }
@@ -39,10 +39,10 @@ public class Route {
     }
 
     public List<Driver> getDrivers() {
-        return Drivers;
+        return drivers;
     }
 
-    public void setDrivers(List<Driver> Drivers) {
-        this.Drivers = Drivers;
+    public void setDrivers(List<Driver> drivers) {
+        this.drivers = drivers;
     }
 }

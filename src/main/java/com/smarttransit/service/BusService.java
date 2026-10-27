@@ -45,4 +45,8 @@ public class BusService {
         busRepository.deleteById(id);
         return "Bus deleted successfully";
     }
+
+    public List<Bus> getFreeBuses() {
+        return busRepository.findFreeBuses();
+    }
 }

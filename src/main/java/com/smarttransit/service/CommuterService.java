@@ -49,4 +49,8 @@ public class CommuterService {
     public List<Commuter> getByLastName(String lastName) {
         return commuterRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
     }
+
+    public List<Commuter> getCommutersOfDriver(UUID driverId) {
+        return commuterRepository.findCommutersOfDriver(driverId);
+    }
 }

@@ -45,4 +45,8 @@ public class DriverService {
         driverRepository.deleteById(id);
         return "Driver deleted successfully";
     }
+
+    public List<Driver> getByRoute(String name) {
+        return driverRepository.findByRouteName(name);
+    }
 }
