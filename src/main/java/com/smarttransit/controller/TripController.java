@@ -1,0 +1,58 @@
+package com.smarttransit.controller;
+
+import com.smarttransit.model.Trip;
+import com.smarttransit.service.TripService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+@RestController
+@RequestMapping("/api/trips")
+public class TripController {
+
+    @Autowired
+    private TripService tripService;
+
+    @PostMapping("/save")
+    public ResponseEntity<String> save(@RequestBody Trip trip) {
+        String message = tripService.save(trip);
+        return new ResponseEntity<>(message, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/all")
+    public List<Trip> getAll() {
+        return tripService.getAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getById(@PathVariable UUID id) {
+        Optional<Trip> trip = tripService.getById(id);
+        if (trip.isEmpty()) {
+            return new ResponseEntity<>("The trip with that id does not exist", HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(trip.get(), HttpStatus.OK);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> update(@PathVariable UUID id, @RequestBody Trip trip) {
+        String message = tripService.update(id, trip);
+        if (message.equals("The trip with that id does not exist")) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> delete(@PathVariable UUID id) {
+        String message = tripService.delete(id);
+        if (message.equals("The trip with that id does not exist")) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+}
