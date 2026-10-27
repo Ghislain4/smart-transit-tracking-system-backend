@@ -1,5 +1,8 @@
 package com.smarttransit.controller;
 
+import com.smarttransit.model.TripStatus;
+import java.time.LocalDate;
+
 import com.smarttransit.model.Trip;
 import com.smarttransit.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +57,17 @@ public class TripController {
             return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/by-status")
+    public List<Trip> getByStatus(@RequestParam TripStatus status) {
+        return tripService.getByStatus(status);
+    }
+
+    @GetMapping("/between")
+    public List<Trip> GetBetween(@RequestParam String start, @RequestParam String end) {
+        LocalDate startDate = LocalDate.parse(start);
+        LocalDate endDate = LocalDate.parse(end);
+        return tripService.getBetween(startDate, endDate);
     }
 }

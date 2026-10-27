@@ -1,5 +1,8 @@
 package com.smarttransit.service;
 
+import com.smarttransit.model.TripStatus;
+import java.time.LocalDate;
+
 import com.smarttransit.model.Trip;
 import com.smarttransit.repository.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,5 +47,13 @@ public class TripService {
         }
         tripRepository.deleteById(id);
         return "Trip deleted successfully";
+    }
+
+    public List<Trip> getByStatus(TripStatus status) {
+        return tripRepository.findByStatusOrderByTripDateAsc(status);
+    }
+
+    public List<Trip> getBetween(LocalDate start, LocalDate end) {
+        return tripRepository.findByTripDateBetweenOrderByTripDateAsc(start, end);
     }
 }

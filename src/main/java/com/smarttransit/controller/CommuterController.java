@@ -55,4 +55,9 @@ public class CommuterController {
         }
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
+
+    @GetMapping("/by-last-name")
+    public List<Commuter> getByLastName(@RequestParam String lastName) {
+        return commuterService.getByLastName(lastName);
+    }
 }

@@ -45,4 +45,8 @@ public class CommuterService {
         commuterRepository.deleteById(id);
         return "Commuter deleted successfully";
     }
+
+    public List<Commuter> getByLastName(String lastName) {
+        return commuterRepository.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
 }
