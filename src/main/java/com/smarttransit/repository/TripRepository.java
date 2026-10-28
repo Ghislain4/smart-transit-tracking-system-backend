@@ -5,7 +5,7 @@ import com.smarttransit.model.TripStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,4 +15,6 @@ public interface TripRepository extends JpaRepository<Trip, UUID> {
 
     // B3: deliver query (date range + orderby)
     List<Trip> findByTripDateBetweenOrderByTripDateAsc(LocalDate start, LocalDate end);
+
+    boolean existsByDriverIdAndTripDateAndStatusNot(UUID driverId, LocalDate tripDate, TripStatus status);
 }

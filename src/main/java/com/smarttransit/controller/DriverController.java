@@ -60,4 +60,30 @@ public class DriverController {
     public List<Driver> getByRoute(@RequestParam String name) {
         return driverService.getByRoute(name);
     }
+
+    @PutMapping("/{driverId}/routes/{routeId}")
+    public ResponseEntity<String> addRoute(@PathVariable UUID driverId, @PathVariable UUID routeId) {
+        String message = driverService.addRoute(driverId, routeId);
+        if (message.equals("The driver with that id does not exist")
+                || message.equals("That route does not exist")) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if (message.equals("The driver already has that route")) {
+            return new ResponseEntity<>(message, HttpStatus.CONFLICT);
+        }
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @PatchMapping("/{driverId}/bus")
+    public ResponseEntity<String> changeBus(@PathVariable UUID driverId, @RequestParam int busNumber) {
+        String message = driverService.changeBus(driverId, busNumber);
+        if (message.equals("The driver with that id does not exist")
+                || message.equals("The bus with that busNumber does not exist")) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if (message.equals("That bus is taken by another driver")) {
+            return new ResponseEntity<>(message, HttpStatus.CONFLICT);
+        }
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
 }

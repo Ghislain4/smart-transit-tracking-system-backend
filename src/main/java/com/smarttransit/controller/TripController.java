@@ -4,12 +4,14 @@ import com.smarttransit.model.TripStatus;
 import java.time.LocalDate;
 
 import com.smarttransit.model.Trip;
+import com.smarttransit.model.TripStatus;
 import com.smarttransit.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -70,4 +72,17 @@ public class TripController {
         LocalDate endDate = LocalDate.parse(end);
         return tripService.getBetween(startDate, endDate);
     }
+
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<String> updateStatus(@PathVariable UUID id, @RequestParam TripStatus status) {
+        String message = tripService.updateStatus(id, status);
+        if (message.equals("The trip with that id does not exist")) {
+            return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
+        }
+        if (message.startsWith("cannot change status")) {
+            return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
 }

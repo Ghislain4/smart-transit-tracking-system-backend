@@ -1,5 +1,6 @@
 package com.smarttransit.repository;
 
+import com.smarttransit.model.Bus;
 import com.smarttransit.model.Driver;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -15,4 +16,5 @@ public interface DriverRepository extends JpaRepository<Driver, UUID> {
             "WHERE LOWER(r.name)  LIKE LOWER(CONCAT('%', :name, '%'))")
     List<Driver> findByRouteName(@Param("name") String name);
 
+    boolean existsByBus(Bus bus);
 }
