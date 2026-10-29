@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -98,6 +102,19 @@ public class TripController {
         LocalDate day = LocalDate.parse(date);
         String message = tripService.cancelDay(driverId, day);
         return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/page")
+    public Page<Trip> getPage(@RequestParam int page,
+            @RequestParam int size,
+            @RequestParam String sort) {
+        String[] parts = sort.split(",");
+        Sort.Direction direction = Sort.Direction.ASC;
+        if (parts.length > 1 && parts[1].equalsIgnoreCase("desc")) {
+            direction = Sort.Direction.DESC;
+        }
+        Pageable pageable = PageRequest.of(page, size, Sort.by(direction, parts[0]));
+        return tripService.getPage(pageable);
     }
 
 }

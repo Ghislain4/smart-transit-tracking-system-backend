@@ -33,4 +33,8 @@ public interface TripRepository extends JpaRepository<Trip, UUID> {
             @Param("day") LocalDate day,
             @Param("newStatus") TripStatus newStatus,
             @Param("keepStatus") TripStatus keepStatus);
+
+    long countByTripDate(LocalDate tripDate);
+
+    long countByStatus(TripStatus status);
 }

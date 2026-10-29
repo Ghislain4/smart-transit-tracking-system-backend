@@ -7,6 +7,8 @@ import com.smarttransit.model.TripStatus;
 import com.smarttransit.repository.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -114,5 +116,9 @@ public class TripService {
     public String cancelDay(UUID driverId, LocalDate date) {
         int count = tripRepository.cancelDay(driverId, date, TripStatus.CANCELLED, TripStatus.ARRIVED);
         return count + " trips cancelled";
+    }
+
+    public Page<Trip> getPage(Pageable pageable) {
+        return tripRepository.findAll(pageable);
     }
 }
