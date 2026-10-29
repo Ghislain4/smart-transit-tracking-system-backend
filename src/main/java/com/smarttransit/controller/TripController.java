@@ -88,4 +88,16 @@ public class TripController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
+    @GetMapping("/stats/by-status")
+    public List<Object[]> getStatusByStatus() {
+        return tripService.getStatsByStatus();
+    }
+
+    @PatchMapping("/cancel-day")
+    public ResponseEntity<String> cancelDay(@RequestParam UUID driverId, @RequestParam String date) {
+        LocalDate day = LocalDate.parse(date);
+        String message = tripService.cancelDay(driverId, day);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
 }

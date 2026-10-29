@@ -1,5 +1,6 @@
 package com.smarttransit.service;
 
+import org.springframework.transaction.annotation.Transactional;
 import com.smarttransit.repository.StopReportRepository;
 import com.smarttransit.model.Trip;
 import com.smarttransit.model.TripStatus;
@@ -103,5 +104,15 @@ public class TripService {
         trip.setStatus(newStatus);
         tripRepository.save(trip);
         return "Trip status updated successfully";
+    }
+
+    public List<Object[]> getStatsByStatus() {
+        return tripRepository.countTripsByStatus();
+    }
+
+    @Transactional
+    public String cancelDay(UUID driverId, LocalDate date) {
+        int count = tripRepository.cancelDay(driverId, date, TripStatus.CANCELLED, TripStatus.ARRIVED);
+        return count + " trips cancelled";
     }
 }
