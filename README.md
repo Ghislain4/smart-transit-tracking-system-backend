@@ -31,5 +31,5 @@ Entities: Commuter, Driver, Route, Bus, Trip and StopReport.
 6. The API starts on `http://localhost:8080`. The tables are created automatically
    (`spring.jpa.hibernate.ddl-auto=update`).
 7. Import `smart-transit-tracking-system-midterm.postman_collection.json` in Postman.
-   Enter the seed data first (folders `seed data` and `seed stop report`), then test
+   Enter the seed data first (folders  `seed stop report`), then test
    each requirement (A2, B1, C4, D2, ...).
