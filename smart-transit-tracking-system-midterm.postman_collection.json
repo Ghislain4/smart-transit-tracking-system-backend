@@ -1,0 +1,1339 @@
+{
+  "info": {
+    "_postman_id": "563a1ded-c04f-4016-9aea-c2806113d62a",
+    "name": "smart-transit-tracking-system-midterm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56907970",
+    "_collection_link": "https://go.postman.co/collection/56907970-563a1ded-c04f-4016-9aea-c2806113d62a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "seed stop report",
+      "item": [
+        {
+          "name": "seed stop report 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Kimironko Market\", \"remarks\": \"Heavy traffic at the roundabout\", \"delayMinutes\": 7}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=0a09e3c3-3a60-439d-9a37-52581ccf30d6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "0a09e3c3-3a60-439d-9a37-52581ccf30d6"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed stop report 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Remera Stop\", \"remarks\": \"Passengers boarding slowly\", \"delayMinutes\": 3}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=0a09e3c3-3a60-439d-9a37-52581ccf30d6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "0a09e3c3-3a60-439d-9a37-52581ccf30d6"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed stop report 3",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Nyabugogo Terminal\", \"remarks\": \"Bus waited for passengers\", \"delayMinutes\": 10}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=452fbb4d-a1cd-499b-b59d-0421a9aee497",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "452fbb4d-a1cd-499b-b59d-0421a9aee497"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed stop report 4",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Kabuga Stop\", \"remarks\": \"Road works\", \"delayMinutes\": 5}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=452fbb4d-a1cd-499b-b59d-0421a9aee497",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "452fbb4d-a1cd-499b-b59d-0421a9aee497"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed stop report 5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Downtown Station\", \"remarks\": \"Long queue\", \"delayMinutes\": 4}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=6c17bd7f-8f4b-4bc5-97a9-079405355bf6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "6c17bd7f-8f4b-4bc5-97a9-079405355bf6"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed stop report 6",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"stopName\": \"Gikondo Stop\", \"remarks\": \"Rain slowed traffic\", \"delayMinutes\": 6}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stop-reports/save?tripId=6c17bd7f-8f4b-4bc5-97a9-079405355bf6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stop-reports",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "tripId",
+                  "value": "6c17bd7f-8f4b-4bc5-97a9-079405355bf6"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "A2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Nyabugogo - Kimironko\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/routes/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "routes",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2 get all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/commuters/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "commuters",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "seed driver",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"busNumber\": 104, \"name\": \"Bus D\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/buses/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "buses",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "driver seed",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Eric\", \"lastName\": \"Mugisha\", \"licenseNumber\": \"LIC-001\",\r\n  \"bus\": {\"id\": \"b7007014-691e-4035-9750-59690010769c\"},\r\n  \"routes\": [\r\n    {\"id\": \"a910e9cc-299d-4342-89de-0d9d747acb0c\"},\r\n    {\"id\": \"16d25926-7bf7-47b8-9646-0d24eabc0c54\"}\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "seed commuter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get commuters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/commuters/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "commuters",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "seed trip",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tripDate\": \"2026-10-05\", \"status\": \"ARRIVED\", \"boardingStop\": \"Nyabugogo\", \"etaMinutes\": 15,\r\n  \"commuter\": {\"id\": \"8aa0a86a-0cf2-4f4d-93e7-3ea8f91ee4b8\"},\r\n  \"driver\": {\"id\": \"5e0f3938-2d3d-450e-bbc4-3fc56a97526d\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/trips/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get trips",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tripDate\": \"2026-12-01\",\r\n  \"status\": \"PLANNED\",\r\n  \"boardingStop\": \"Nyabugogo\",\r\n  \"etaMinutes\": 15,\r\n  \"commuter\": {\"id\": \"8aa0a86a-0cf2-4f4d-93e7-3ea8f91ee4b8\"},\r\n  \"driver\": {\"id\": \"3d1bac0c-fe85-4ea7-b8b5-21e7d31ba336\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/trips/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2 error",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/00000000-0000-0000-0000-000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "00000000-0000-0000-0000-000000000000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1 empty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2 error",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/by-status?status=WRONG",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "by-status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "WRONG"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B3",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/between?start=2026-10-01&end=2026-10-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "between"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2026-10-01"
+            },
+            {
+              "key": "end",
+              "value": "2026-10-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B3 empty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/between?start=2027-01-01&end=2027-01-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "between"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2027-01-01"
+            },
+            {
+              "key": "end",
+              "value": "2027-01-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/routes/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "routes",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1 empty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/by-route?name=zzz",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "by-route"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "zzz"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/buses/free",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "buses",
+            "free"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C3",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/commuters/of-driver/5e0f3938-2d3d-450e-bbc4-3fc56a97526d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "commuters",
+            "of-driver",
+            "5e0f3938-2d3d-450e-bbc4-3fc56a97526d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C4 error",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/commuters/of-driver/00000000-0000-0000-0000-000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "commuters",
+            "of-driver",
+            "00000000-0000-0000-0000-000000000000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"tripDate\": \"2026-12-10\", \"status\": \"ARRIVED\", \"boardingStop\": \"Remera\", \"etaMinutes\": 10, \"commuter\": {\"id\": \"f7a7d5b1-0f21-45c5-89db-172dd7a83832\"}, \"driver\": {\"id\": \"666b3354-b3ff-43cd-8526-ab7370e0c75a\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/trips/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1 error",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tripDate\": \"2026-10-01\",\r\n  \"status\": \"PLANNED\",\r\n  \"boardingStop\": \"Remera\",\r\n  \"etaMinutes\": 10,\r\n  \"commuter\": {\"id\": \"f7a7d5b1-0f21-45c5-89db-172dd7a83832\"},\r\n  \"driver\": {\"id\": \"666b3354-b3ff-43cd-8526-ab7370e0c75a\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/trips/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1 error 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tripDate\": \"2026-11-10\",\r\n  \"status\": \"PLANNED\",\r\n  \"boardingStop\": \"Remera\",\r\n  \"etaMinutes\": 10,\r\n  \"commuter\": {\"id\": \"f7a7d5b1-0f21-45c5-89db-172dd7a83832\"},\r\n  \"driver\": {\"id\": \"5e0f3938-2d3d-450e-bbc4-3fc56a97526d\"}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/trips/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2 error",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/0a09e3c3-3a60-439d-9a37-52581ccf30d6/status?status=PLANNED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "0a09e3c3-3a60-439d-9a37-52581ccf30d6",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "PLANNED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/a0b1570b-59ac-4ffe-bc01-020632fe0a77/status?status=DEPARTED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "a0b1570b-59ac-4ffe-bc01-020632fe0a77",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "DEPARTED"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/666b3354-b3ff-43cd-8526-ab7370e0c75a/routes/16d25926-7bf7-47b8-9646-0d24eabc0c54",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "666b3354-b3ff-43cd-8526-ab7370e0c75a",
+            "routes",
+            "16d25926-7bf7-47b8-9646-0d24eabc0c54"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3 error",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/666b3354-b3ff-43cd-8526-ab7370e0c75a/routes/16d25926-7bf7-47b8-9646-0d24eabc0c54",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "666b3354-b3ff-43cd-8526-ab7370e0c75a",
+            "routes",
+            "16d25926-7bf7-47b8-9646-0d24eabc0c54"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/5e0f3938-2d3d-450e-bbc4-3fc56a97526d/bus?busNumber=104",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "5e0f3938-2d3d-450e-bbc4-3fc56a97526d",
+            "bus"
+          ],
+          "query": [
+            {
+              "key": "busNumber",
+              "value": "104"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D4 error",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/drivers/5e0f3938-2d3d-450e-bbc4-3fc56a97526d/bus?busNumber=102",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "drivers",
+            "5e0f3938-2d3d-450e-bbc4-3fc56a97526d",
+            "bus"
+          ],
+          "query": [
+            {
+              "key": "busNumber",
+              "value": "102"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"stopName\": \"Kimironko Market\", \"remarks\": \"Heavy traffic at the roundabout\", \"delayMinutes\": 7}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/save?tripId=6c17bd7f-8f4b-4bc5-97a9-079405355bf6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "tripId",
+              "value": "6c17bd7f-8f4b-4bc5-97a9-079405355bf6"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1 error",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"stopName\": \"Kimironko Market\", \"remarks\": \"Heavy traffic at the roundabout\", \"delayMinutes\": 7}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/save?tripId=4fa31b13-4e34-4371-abab-20a84827fb01",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "tripId",
+              "value": "4fa31b13-4e34-4371-abab-20a84827fb01"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E1 error 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"stopName\": \"Kimironko Market\", \"remarks\": \"Heavy traffic at the roundabout\", \"delayMinutes\": 7}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/save?tripId=00000000-0000-0000-0000-000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "tripId",
+              "value": "00000000-0000-0000-0000-000000000000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/commuter/TAP-778812",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "commuter",
+            "TAP-778812"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E2 empty",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/commuter/TAP-000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "commuter",
+            "TAP-000000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E3",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/delete/8aa0a86a-0cf2-4f4d-93e7-3ea8f91ee4b8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "delete",
+            "8aa0a86a-0cf2-4f4d-93e7-3ea8f91ee4b8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/stop-reports/delete/0c181f54-c241-49c4-be2e-c5e388bec2d0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "stop-reports",
+            "delete",
+            "0c181f54-c241-49c4-be2e-c5e388bec2d0"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "E3 error 2",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/delete/0a09e3c3-3a60-439d-9a37-52581ccf30d6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "delete",
+            "0a09e3c3-3a60-439d-9a37-52581ccf30d6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/stats/by-status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "stats",
+            "by-status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F2",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/cancel-day?driverId=5e0f3938-2d3d-450e-bbc4-3fc56a97526d&date=2026-10-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "cancel-day"
+          ],
+          "query": [
+            {
+              "key": "driverId",
+              "value": "5e0f3938-2d3d-450e-bbc4-3fc56a97526d"
+            },
+            {
+              "key": "date",
+              "value": "2026-10-20"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "F2 zero",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/cancel-day?driverId=5e0f3938-2d3d-450e-bbc4-3fc56a97526d&date=2026-10-05",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "cancel-day"
+          ],
+          "query": [
+            {
+              "key": "driverId",
+              "value": "5e0f3938-2d3d-450e-bbc4-3fc56a97526d"
+            },
+            {
+              "key": "date",
+              "value": "2026-10-05"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Bonus dashboard",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/dashboard/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "dashboard",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Bonus page",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/trips/page?page=0&size=5&sort=tripDate,desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "trips",
+            "page"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "5"
+            },
+            {
+              "key": "sort",
+              "value": "tripDate,desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
