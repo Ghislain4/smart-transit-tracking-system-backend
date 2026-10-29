@@ -1,5 +1,6 @@
 package com.smarttransit.service;
 
+import com.smarttransit.repository.StopReportRepository;
 import com.smarttransit.model.Trip;
 import com.smarttransit.model.TripStatus;
 import com.smarttransit.repository.TripRepository;
@@ -16,6 +17,9 @@ public class TripService {
 
     @Autowired
     private TripRepository tripRepository;
+
+    @Autowired
+    private StopReportRepository stopReportRepository;
 
     // D1: safe saving
     public String save(Trip trip) {
@@ -53,11 +57,15 @@ public class TripService {
     }
 
     public String delete(UUID id) {
-        if (!tripRepository.existsById(id)) {
-            return "The trip with that id does not exist";
+        Optional<Trip> found = tripRepository.findById(id);
+        if (found.isEmpty()) {
+            return "The trip with that does not exist";
+        }
+        if (stopReportRepository.existsByTrip(found.get())) {
+            return "That trip has stop reports, delete them first";
         }
         tripRepository.deleteById(id);
-        return "Trip deleted successfully";
+        return "Trip delete successfully";
     }
 
     // B2
